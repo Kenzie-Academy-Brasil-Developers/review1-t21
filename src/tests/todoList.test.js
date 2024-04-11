@@ -20,8 +20,8 @@ const verifyTodo = (todo) => {
 
 describe("todoList class", () => {
    it("should be able to create a todo successfully", () => {
-      const newTodo = todoList.createTodos(todoData);
-      verifyProduct(newTodo);
+      const newTodo = todoList.createTodo(todoData);
+      verifyTodo(newTodo);
    });
 
    it("should be able to get todo list successfully", () => {
@@ -47,9 +47,9 @@ describe("todoList class", () => {
       expect(updatedTodo.id).toBeTypeOf("number");
       expect(updatedTodo.id).toBe(1);
       expect(updatedTodo.title).toBeTypeOf("string");
-      expect(updatedTodo.title).toBe(newProductData.title);
+      expect(updatedTodo.title).toBe(newTodoData.title);
       expect(updatedTodo.content).toBeTypeOf("string");
-      expect(updatedTodo.content).toBe(newProductData.content);  
+      expect(updatedTodo.content).toBe(newTodoData.content);  
       expect(String(updatedTodo.updatedAt)).toContain(year);
    });
 
